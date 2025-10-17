@@ -1,0 +1,52 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <!-- 用户信息区域 -->
+  <view class="user-info">
+    <button 
+      wx:if="{{!hasUserInfo && canIUseGetUserProfile}}" 
+      bindtap="getUserProfile"
+      class="login-btn"
+    >
+      微信登录
+    </button>
+    <view wx:else class="user-info__container">
+      <image src="{{userInfo.avatarUrl}}" mode="widthFix" class="user-avatar"></image>
+      <text class="user-name">{{userInfo.nickName}}的课程表</text>
+    </view>
+  </view>
+
+  <!-- 课程表输入区域 -->
+  <view class="course-input">
+    <text class="section-title">请粘贴或输入课程表内容：</text>
+    <textarea 
+      placeholder="例如：高等数学 周一1-2节 301教室" 
+      bindinput="onCourseInput"
+      value="{{courseInput}}"
+      class="course-textarea"
+    ></textarea>
+    <view class="btn-group">
+      <button bindtap="parseCourse" class="btn parse-btn">解析课程表</button>
+      <button bindtap="clearCourse" class="btn clear-btn">清空</button>
+    </view>
+  </view>
+
+  <!-- 课程表展示区域 -->
+  <view class="course-display" wx:if="{{courseList.length > 0}}">
+    <text class="section-title">解析结果：</text>
+    <view class="course-table">
+      <view class="table-header">
+        <view class="table-cell">课程名称</view>
+        <view class="table-cell">时间</view>
+        <view class="table-cell">地点</view>
+      </view>
+      <view class="table-row" wx:for="{{courseList}}" wx:key="id">
+        <view class="table-cell">{{item.name}}</view>
+        <view class="table-cell">{{item.time}}</view>
+        <view class="table-cell">{{item.location}}</view>
+      </view>
+    </view>
+    
+    <button bindtap="exportCourse" class="export-btn">导出课程表</button>
+  </view>
+</view>
+    
