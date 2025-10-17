@@ -207,9 +207,9 @@ class ComposerStaticInit5aa211a0e3379d8d020ee2eafa383a71
         ),
         'phpDocumentor\\Reflection\\' => 
         array (
-            0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            0 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
         ),
         'Whoops\\' => 
         array (
@@ -608,7 +608,6 @@ class ComposerStaticInit5aa211a0e3379d8d020ee2eafa383a71
         'App\\Http\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Http/Controllers/BaseController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DiffSchoolController' => __DIR__ . '/../..' . '/app/Http/Controllers/DiffSchoolController.php',
-        'App\\Http\\Controllers\\ForumController' => __DIR__ . '/../..' . '/app/Http/Controllers/ForumController.php',
         'App\\Http\\Controllers\\JwController' => __DIR__ . '/../..' . '/app/Http/Controllers/JwController.php',
         'App\\Http\\Controllers\\OAWXHander' => __DIR__ . '/../..' . '/app/Http/Controllers/OAWXHander.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
@@ -643,6 +642,7 @@ class ComposerStaticInit5aa211a0e3379d8d020ee2eafa383a71
         'App\\Models\\major' => __DIR__ . '/../..' . '/app/Models/major.php',
         'App\\Models\\officedata' => __DIR__ . '/../..' . '/app/Models/officedata.php',
         'App\\Models\\school' => __DIR__ . '/../..' . '/app/Models/school.php',
+        'App\\Models\\setting' => __DIR__ . '/../..' . '/app/Models/setting.php',
         'App\\Models\\swiperlist' => __DIR__ . '/../..' . '/app/Models/swiperlist.php',
         'App\\Models\\timemap' => __DIR__ . '/../..' . '/app/Models/timemap.php',
         'App\\Models\\timetable' => __DIR__ . '/../..' . '/app/Models/timetable.php',
