@@ -1,0 +1,1 @@
+"use strict";const o={data:()=>({src:""}),methods:{},onLoad(o){"{}"==JSON.stringify(o)?(this.src="http://ycit2022.apiicu.com/",console.log("add")):(console.log(o),this.src=o.url)}};const c=require("../../common/vendor.js")._export_sfc(o,[["render",function(o,c,r,s,t,e){return{a:t.src}}]]);wx.createPage(c);

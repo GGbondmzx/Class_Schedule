@@ -1,0 +1,175 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle":"custom",
+				"backgroundColor": "#597CE4"
+				
+			}
+		}
+	    ,{
+            "path" : "pages/mine/mine",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人中心",
+                "enablePullDownRefresh": false,
+				"backgroundColor": "#F3F5F7",
+				"navigationBarTextStyle": "white"
+            }
+            
+        }
+        ,{
+            "path" : "pages/timetable/timetable",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的课表",
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/import/import",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff",
+				"navigationStyle": "custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/shouze/shouze",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "用户协议",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/selectSchool/selectSchool",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "选择学校",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F1F1F1"
+            }
+            
+        }
+        ,{
+            "path" : "pages/webview/webview",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "校园头条",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F1F1F1"
+            }
+            
+        }
+        ,{
+            "path" : "pages/edit/edit",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "编辑课表",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F1F1F1"
+            }
+            
+        }
+        ,{
+            "path" : "pages/moreInfo/moreInfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "校园头条",
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "white"
+            }
+            
+        }
+        ,{
+            "path" : "pages/push/push",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "课表提醒",
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "white"
+            }
+            
+        }
+        ,{
+            "path" : "pages/selectway/selectway",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F1F1F1"
+            }
+            
+        }
+        ,{
+            "path" : "pages/class/class",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F1F1F1"
+            }
+            
+        }
+        ,{
+            "path" : "pages/localclass/localclass",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "课程管理",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F1F1F1"
+            }
+            
+        }
+        ,{
+            "path" : "pages/xh/xh",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff",
+				"navigationStyle": "custom"
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "盐小助mini",
+		"navigationBarBackgroundColor": "#3A80F0",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#f09582",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"iconWidth": "19px",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "首页",
+			"selectedIconPath": "./static/index_s.png",
+			"iconPath": "./static/index.png"
+		}, {
+			"pagePath": "pages/timetable/timetable",
+			"text": "课表",
+			"iconPath": "./static/iclass.png",
+			"selectedIconPath": "./static/iclass_s.png"
+		}, {
+			"pagePath": "pages/mine/mine",
+			"text": "我的",
+			"iconPath": "./static/mine.png",
+			"selectedIconPath": "./static/mine_s.png"
+		}]
+	}
+}

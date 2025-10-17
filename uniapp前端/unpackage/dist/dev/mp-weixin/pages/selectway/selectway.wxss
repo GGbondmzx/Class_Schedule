@@ -1,0 +1,33 @@
+page {
+  background-color: #F1F1F1;
+}
+.selectway {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 22rpx;
+}
+.selectway .selectwat_item {
+  margin-top: 31rpx;
+  width: 692rpx;
+  height: 156rpx;
+  background-color: #59ADFB;
+  border-radius: 16rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.selectway .selectwat_item .title {
+  color: white;
+  font-size: large;
+  font-weight: 900;
+}
+.selectway .selectwat_item .tips {
+  color: white;
+  font-size: medium;
+  font-weight: 400;
+}

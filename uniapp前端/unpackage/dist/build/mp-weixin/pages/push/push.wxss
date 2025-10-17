@@ -1,0 +1,1 @@
+.img{display:flex;justify-content:center;align-items:center;margin-top:70rpx}.switch_bar{width:522rpx;position:relative;height:79rpx;background-color:#597ce4;display:flex;justify-content:center;align-items:center;border-radius:60rpx}

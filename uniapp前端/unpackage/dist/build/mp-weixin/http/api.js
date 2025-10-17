@@ -1,0 +1,1 @@
+"use strict";const e=require("../common/vendor.js");exports.myRequest=t=>new Promise(((s,i)=>{e.index.request({url:"https://v1api.apiicu.com/api/"+t.url,method:t.method||"GET",data:t.data||{},success:e=>{s(e)},fail:t=>{e.index.showToast({title:"请求接口失败(可能服务器没有开)",icon:"fail"}),i(t)}})}));

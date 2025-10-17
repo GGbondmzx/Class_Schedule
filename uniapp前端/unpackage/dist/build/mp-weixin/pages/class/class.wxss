@@ -1,0 +1,1 @@
+page{background-color:#f1f1f1}.tips{margin-top:50rpx;margin-bottom:70rpx;width:100vw;height:50rpx;font-weight:200}.body{margin-left:38rpx;margin-right:38rpx}.button{height:86rpx;margin-top:65rpx;display:flex;flex-direction:row;justify-content:center;align-items:center;background-color:#539ffc;border-radius:16rpx;font-size:29rpx;color:#fff}

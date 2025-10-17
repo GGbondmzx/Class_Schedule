@@ -1,0 +1,46 @@
+page {
+  background-color: #F1F1F1;
+}
+.plusclass {
+  width: 100vw;
+  height: 100rpx;
+  background-color: #F1F1F1;
+}
+.plusclass image {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 20rpx;
+}
+.plusclass text {
+  position: absolute;
+  top: 20rpx;
+  left: 10rpx;
+  font-size: small;
+}
+.svall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.svall .alllocal_item {
+  width: 692rpx;
+  height: 126rpx;
+  background-color: #59ADFB;
+  border-radius: 16rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  color: aliceblue;
+}
+.svall .alllocal_item .item_name {
+  font-size: large;
+}
+.svall .alllocal_item .item_info {
+  font-size: smaller;
+}

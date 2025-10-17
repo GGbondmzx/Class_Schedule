@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "编辑课表",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#F1F1F1",
+  "usingComponents": {
+    "uni-grid-item": "../../uni_modules/uni-grid/components/uni-grid-item/uni-grid-item",
+    "uni-grid": "../../uni_modules/uni-grid/components/uni-grid/uni-grid"
+  }
+}

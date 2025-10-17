@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "课程管理",
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#F1F1F1",
+  "usingComponents": {
+    "uni-swipe-action-item": "../../uni_modules/uni-swipe-action/components/uni-swipe-action-item/uni-swipe-action-item",
+    "uni-swipe-action": "../../uni_modules/uni-swipe-action/components/uni-swipe-action/uni-swipe-action",
+    "uni-load-more": "../../uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "uni-fab": "../../uni_modules/uni-fab/components/uni-fab/uni-fab"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/timetable/timetable",
+    "pages/import/import",
+    "pages/shouze/shouze",
+    "pages/selectSchool/selectSchool",
+    "pages/webview/webview",
+    "pages/edit/edit",
+    "pages/moreInfo/moreInfo",
+    "pages/push/push",
+    "pages/selectway/selectway",
+    "pages/class/class",
+    "pages/localclass/localclass",
+    "pages/xh/xh"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "盐小助mini",
+    "navigationBarBackgroundColor": "#3A80F0",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#f09582",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "./static/index_s.png",
+        "iconPath": "./static/index.png"
+      },
+      {
+        "pagePath": "pages/timetable/timetable",
+        "text": "课表",
+        "iconPath": "./static/iclass.png",
+        "selectedIconPath": "./static/iclass_s.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./static/mine.png",
+        "selectedIconPath": "./static/mine_s.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

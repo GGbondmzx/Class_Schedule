@@ -1,0 +1,12 @@
+page {
+  background-color: #F1F1F1;
+}
+.hot_item {
+  position: relative;
+  width: 750rpx;
+  height: 114rpx;
+}
+.hot_line {
+  width: 712rpx;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+}
