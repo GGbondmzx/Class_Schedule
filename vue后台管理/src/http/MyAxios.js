@@ -1,5 +1,5 @@
 import axios from "axios";
-axios.defaults.baseURL = 'https://v1api.apiicu.com/api/';
+axios.defaults.baseURL = 'http://localhost:8000/api/';
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 

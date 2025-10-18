@@ -1,4 +1,4 @@
-const BASE_URL = 'https://v1api.apiicu.com/api/'; // 后端的主机名 + 端口号
+const BASE_URL = 'http://localhost:8000/api/'; // 后端的主机名 + 端口号
 
 export const myRequest = (options) => {
 	return new Promise((resolve, reject) => {
