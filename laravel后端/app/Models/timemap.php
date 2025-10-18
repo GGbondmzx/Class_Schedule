@@ -9,5 +9,4 @@ class timemap extends Model
 {
     use HasFactory;
     protected $table='timemap';
-    public $timestamps = false;
 }

@@ -8,6 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class swiperlist extends Model
 {
     use HasFactory;
-    protected $table='swiperlist';
-    public $timestamps = false;
+    protected $table='swiper_list';
 }

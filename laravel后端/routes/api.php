@@ -18,6 +18,35 @@ use App\Http\Controllers\AdminController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+// 健康检查接口，便于前后端连通性验证
+Route::get('/health', function () {
+  return response()->json(['status' => 'ok']);
+});
+
+// 数据库健康检查接口，尝试查询admin表记录数，异常则返回失败
+Route::get('/health/db', function () {
+  try {
+    $count = \Illuminate\Support\Facades\DB::table('admin')->count();
+    return response()->json(['db_status' => 'ok', 'admin_rows' => $count]);
+  } catch (\Throwable $e) {
+    return response()->json(['db_status' => 'fail', 'error' => $e->getMessage()], 500);
+  }
+});
+
+// 一次性开发接口：将admin(id=0)密码重置为明文
+Route::post('/admin/dev/resetPasswordPlain', function () {
+  try {
+    $pwd = request('password');
+    if (!$pwd) {
+      return response()->json(['code' => 400, 'message' => 'missing password']);
+    }
+    \Illuminate\Support\Facades\DB::table('admin')->where('id', 0)->update(['password' => $pwd]);
+    return response()->json(['code' => 200, 'message' => 'ok']);
+  } catch (\Throwable $e) {
+    return response()->json(['code' => 500, 'message' => $e->getMessage()], 500);
+  }
+});
+
 //getsetting
 
 // Route::get('/myapp', function () {

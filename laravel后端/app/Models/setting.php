@@ -9,5 +9,4 @@ class setting extends Model
 {
   use HasFactory;
   protected $table = 'setting';
-  public $timestamps = false;
 }

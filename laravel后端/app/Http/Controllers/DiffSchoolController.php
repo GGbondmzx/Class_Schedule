@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\BaseController;
 use Illuminate\Support\Facades\Crypt;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Http\Request;
 use App\Models\user;
 use App\Models\info;
@@ -37,35 +36,30 @@ class DiffSchoolController extends Controller
 
   public function init()
   {
-    try {
-      $school_id = request('school_id');
-      $school = Schema::hasTable('school') ? school::where('id', $school_id)->get() : collect([]);
-      $info = Schema::hasTable('info') ? info::where('school_id', $school_id)->get() : collect([]);
-      $timemap = Schema::hasTable('timemap') ? timemap::where('school_id', $school_id)->get() : collect([]);
-      $swiper = Schema::hasTable('swiperlist') ? swiperlist::where('school_id', $school_id)->get() : collect([]);
-      $schoollist = Schema::hasTable('school') ? school::all() : collect([]);
-      $setting = Schema::hasTable('setting') ? setting::first() : null;
-  
-      $sr = [];
-      $sr['appname'] = $setting ? $setting->appname : '';
-      $sr['applogo'] = $setting ? $setting->applogo : '';
-      $sr['wxname'] = $setting ? $setting->wxname : '';
-      $sr['wxlogo'] = $setting ? $setting->wxlogo : '';
-  
-      $result = [
-        "startday" => $school,
-        "info" => $info,
-        "timemap" => $timemap,
-        "swiper" => $swiper,
-        "schoollist" => $schoollist,
-        "setting" => $sr
-      ];
-      return response()->json(BaseController::Msg(200, 'success', $result));
-    } catch (\Throwable $e) {
-      return response()->json(BaseController::Msg(500, 'server_error', [
-        'error' => $e->getMessage(),
-      ]));
-    }
+    $school_id = request('school_id');
+    $school = school::where('id', $school_id)->get();
+    $info = info::where('school_id', $school_id)->get();
+    $timemap = timemap::where('school_id', $school_id)->get();
+    $swiper = swiperlist::where('school_id', $school_id)->get();
+    $schoollist = school::all();
+    $setting = setting::first();
+
+    $sr = [];
+    $sr['appname'] = $setting->appname;
+    $sr['applogo'] = $setting->applogo;
+    $sr['wxname'] = $setting->wxname;
+    $sr['wxlogo'] = $setting->wxlogo;
+
+
+    $result = [
+      "startday" => $school,
+      "info" => $info,
+      "timemap" => $timemap,
+      "swiper" => $swiper,
+      "schoollist" => $schoollist,
+      "setting" => $sr
+    ];
+    return response()->json(BaseController::Msg(200, 'success', $result));
   }
 
 

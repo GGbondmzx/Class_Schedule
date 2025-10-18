@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8000/api/'; // 后端的主机名 + 端口号
+const BASE_URL = 'http://101.43.167.131:5119/api/'; // 后端的主机名 + 端口号
 
 export const myRequest = (options) => {
 	return new Promise((resolve, reject) => {

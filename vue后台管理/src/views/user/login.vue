@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { md5 } from 'md5js';
+// 移除MD5加密，直接使用明文密码提交
 export default {
     data() {
         return {
@@ -54,7 +54,7 @@ export default {
         onSubmit() {
             this.$refs["form"].validate((valid) => {
                 if (valid) {
-                    this.form.password = md5(this.form.password, 32)
+                    // 直接提交明文密码
                     this.$http.adminApi.login(this.form).then(res => {
                         console.log(res);
                         if (res.data.code == 200) {

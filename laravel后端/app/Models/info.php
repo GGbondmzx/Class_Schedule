@@ -9,5 +9,4 @@ class info extends Model
 {
     use HasFactory;
     protected $table='info';
-    public $timestamps = false;
 }

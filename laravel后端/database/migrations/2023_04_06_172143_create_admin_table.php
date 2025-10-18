@@ -17,7 +17,7 @@ return new class extends Migration
       $table->id();
       $table->timestamps();
       $table->string('username')->default('chengzhi');
-      $table->string('password')->default('7c3196322feddfd0c74e7c8f88843fc1'); //timetable915
+      $table->string('password')->default('timetable915'); // 明文默认密码
     });
   }
 

@@ -1,0 +1,68 @@
+# Nginx site config for Laravel API (example)
+# Adjust `server_name`, `root`, and PHP-FPM socket to your environment
+
+server {
+    listen 80;
+    server_name your-domain.com;
+
+    # Point to Laravel public directory (adjust this path)
+    root /var/www/kcb/backend/public;
+    index index.php index.html;
+    charset utf-8;
+
+    # Increase if you upload larger files (e.g. timetable imports)
+    client_max_body_size 32M;
+
+    # Access & error logs
+    access_log /var/log/nginx/kcb_access.log;
+    error_log  /var/log/nginx/kcb_error.log warn;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        # Use php-fpm socket or TCP depending on setup
+        # fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+        fastcgi_param DOCUMENT_ROOT $realpath_root;
+    }
+
+    location ~ /\.ht { deny all; }
+}
+
+# Optional: HTTPS server block (enable after issuing certificates)
+# server {
+#     listen 443 ssl http2;
+#     server_name your-domain.com;
+#
+#     ssl_certificate     /etc/letsencrypt/live/your-domain.com/fullchain.pem;
+#     ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
+#     ssl_session_timeout 1d;
+#     ssl_session_cache   shared:SSL:10m;
+#     ssl_protocols       TLSv1.2 TLSv1.3;
+#     ssl_ciphers         HIGH:!aNULL:!MD5;
+#
+#     root /var/www/kcb/backend/public;
+#     index index.php index.html;
+#
+#     client_max_body_size 32M;
+#
+#     location / { try_files $uri $uri/ /index.php?$query_string; }
+#     location ~ \.php$ {
+#         try_files $uri =404;
+#         fastcgi_pass 127.0.0.1:9000; # or unix socket
+#         fastcgi_index index.php;
+#         include fastcgi_params;
+#         fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+#         fastcgi_param DOCUMENT_ROOT $realpath_root;
+#     }
+#     location ~ /\.ht { deny all; }
+#
+#     access_log /var/log/nginx/kcb_ssl_access.log;
+#     error_log  /var/log/nginx/kcb_ssl_error.log warn;
+# }
